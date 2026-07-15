@@ -1,58 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML & CSS Sandbox</title>
+    <title>Html Forms</title>
   </head>
+
   <body>
-    <header>
-      <h1>Apartment Search</h1>
-    </header>
-    <main>
-      <form>
-        <div>
-          <label for="location">Location</label>
-          <input type="text" name="location" id="location" />
-        </div>
-        <br />
+    <h2>Apartment Search</h2>
+    <form action="#" method="post">
+      <div>
+        <label for="location">location</label>
+        <input type="text" name="location " id="location" />
+      </div>
 
-        <div>
-          <label for="price">Price</label>
-          <input type="range" name="price" id="price" />
-        </div>
-        <br />
+      <div>
+        <label for="monthlyPrice">Monthly Price:</label>
+        <input
+          type="range"
+          name="monthlyPrice"
+          id="monthlyPrice"
+          min="0"
+          max="100"
+        />
+      </div>
+      <div>
+        <label for="bedrooms">Number of Bedrooms </label>
+        <input type="number" name="bedrooms" id="bedrooms " />
+      </div>
 
-        <div>
-          <label for="bedrooms">Bedrooms</label>
-          <input type="number" name="bedrooms" id="bedrooms" />
-        </div>
-        <br />
+      <div>
+        <label for="bathrooms">Number of bathrooms</label>
+        <input type="number" name="bathrooms" id="bathrooms" />
+      </div>
 
-        <div>
-          <label for="bathrooms">Bathrooms</label>
-          <input type="number" name="bathrooms" id="bathrooms" />
-        </div>
-        <br />
+      <div>
+        <label for="pet">Pets Allowed: </label>
+        Yes
+        <input type="checkbox" id="pet" value="Yes" />
+      </div>
 
-        <div>
-          <label for="pets">
-            Pets
-            <input type="checkbox" name="pets" id="pets" />
-          </label>
-        </div>
-        <br />
+      <div>
+        <label for="dateAvailable">Date Available: </label>
+        <input type="date" name="dateAvailable" id="dateAvailable" />
+      </div>
 
-        <div>
-          <label for="date">Date Available</label>
-          <input type="date" name="date" id="date" />
-        </div>
-        <br />
-
-        <div>
-          <input type="submit" value="Submit" />
-        </div>
-      </form>
-    </main>
+      <div>
+        <input type="submit" id="submit" />
+      </div>
+    </form>
   </body>
 </html>
