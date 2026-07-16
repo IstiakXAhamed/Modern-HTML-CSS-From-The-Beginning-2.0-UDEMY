@@ -22,14 +22,14 @@ h1{
     margin: 20px;
 }
 .section{
-    border: #333 solid;
+    
     flex: 2;
 }
 
 aside{
     flex: 1;
-    border: #333 solid;
-    background-color: #f4f4f4);
+    
+    background-color: #f4f4f4;
 }
 
 .main aside li {
