@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(199, 242, 242);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width: 600px;
+    margin: 200px   auto;
+}
+
+.card {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+p{
+   padding-bottom: 30px; 
+   font-weight: 500;
+   font-size: larger;
+}
+h2{
+    padding-bottom: 20px;
+}
+.card-sporty h2{
+    color: rgb(255, 0, 0);
+    
+}
+.card-sporty{
+    background: #fff url(./images/sporty.png) no-repeat center right/200px;
+    
+}
+
+.card-casual{
+    background: #fff url(./images/casual.png) no-repeat center right/200px;
+    
+}
+
+.card-formal{
+    background: #fff url(./images/formal.png) no-repeat center right/200px;
+    
+}
+
+.card-casual h2{
+    color: blue;
+}
+
+.card-formal h2{
+    color: rgb(237, 120, 3);
+}
+
+a{
+    font-size: 20px;
+    text-decoration:none ;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    
+}
+
+a:hover{
+    opacity: 50%;
+}
+
+.card-formal a{
+    background-color: rgb(237, 120, 3);
+}
+.card-casual a{
+    background-color: blue;
+}
+.card-sporty a{
+    background-color:  rgb(255, 0, 0);
+}
+
