@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background : black;
+    color: white;    
+    line-height: 1.6;
+
+}
+
+.wrapper{
+   min-height: 100vh;
+   background: linear-gradient(to bottom,rgba(182,66,70,0.9), rgba(90,22,160,0.8)), url(./images/background.jpg) no-repeat center center/cover;
+    
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px ;
+}
+
+.header-right{
+    display: flex;
+    gap: 20px;
+}
+.header .logo{
+    width: 100px;
+    height: 100px;
+}
+.header .header-right i{
+    margin-right: 10px;
+}
+.header .header-right a{
+    color: white;
+
+}
+
+.header .header-right a:hover{
+    color: lightblue;
+
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 100px auto;
+    align-items: start;
+    gap : 50px;
+    height: 100%;
+ padding : 20px;
+}
+
+.main-content form{
+    flex:1;
+}
+.main-content .text-container{
+    flex:1;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.form-group input ,.form-group textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+.form-group textarea{
+    height: 100px;
+    resize: none;
+    margin-bottom: 20px;
+
+}
+
+.btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    display:block;
+    width: 100%;
+
+}
+.btn:hover{
+    background-color: #45a049;
+}
+
+.text-container h1{
+    font-size: 40px;
+    margin: 50px 0 20px;
+    padding-top: 60px;
+    line-height: 1.2;
+
+}
+.text-container{
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px){
+
+    .header{
+        padding: 20px 0 10px
+    }
+  .header ,
+  .header .header-right{
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+  }
+
+  .main-content{
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    
+
+  }
+
+  .main-content form,
+  .main-content .text-container{
+    width: 100%;
+}
+
+.main-content h1{
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 20px 0;
+   
+}
+
+.main-content p{
+    display     : none;
+
+}
+
+
+}
+
+
