@@ -1,83 +1,68 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
-body{
-   
+body {
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.container{
+.container {
     width: 800px;
-    height: 650px;
-    margin: 300px   auto;
+    margin: 40px auto;
     background-color: lightgray;
-    padding: 10px;
-    
+    padding: 20px;
 }
 
-.container h2{
+.container h2 {
     text-align: center;
     padding-bottom: 20px;
-    margin:10px;
 }
 
-
-.images{
-    display: flex;
-    flex-wrap: wrap;
-    
-    gap: 5px;
+/* The grid layout: 3 columns, 3 rows.
+   grid-template-areas is a visual map of where each image goes. */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 180px);
+    gap: 8px;
+    grid-template-areas:
+        "img1 img2 img2"
+        "img1 img3 img4"
+        "img5 img6 img4";
 }
 
-.image1{
-    width: 33%;
-    height: 360px;
-    border-radius: 10px;
-}
-.image2{
-    
-    width: 66%;
-    height: 180px;
-    border-radius: 10px;
-}
-.image3{
+.item1 { grid-area: img1; }
+.item2 { grid-area: img2; }
+.item3 { grid-area: img3; }
+.item4 { grid-area: img4; }
+.item5 { grid-area: img5; }
+.item6 { grid-area: img6; }
+
+/* Each figure is the "box" the number is positioned against. */
+.item {
     position: relative;
-    gap: 5px;
-    top: -181px;
-    left: 263px;
-    flex-wrap: wrap;    
-    width: 33%;
-    height: 177px;
-    border-radius: 10px;
-}
-.image4{
-    position: relative;
-    top: -181px;
-    left: 263px;
-    width: 32.5%;
-    height: 380px;
-    border-radius: 10px;
-}
-.image5{
-  
-    position: relative;
-    left: -521px;
-    width: 33%;
-
-    height: 200px;
-    border-radius: 10px;
-}
-.image6{
-    position: relative;
-    top: -385px;
-    left: 263px;
-    width: 33%;
-    height: 200px;
-    border-radius: 10px;
+    margin: 0;
 }
 
+/* object-fit: cover makes the image fill its box without stretching. */
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* The number, centered in the middle of each image. */
+.item figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
