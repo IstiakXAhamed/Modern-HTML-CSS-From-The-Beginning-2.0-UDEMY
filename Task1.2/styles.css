@@ -44,7 +44,7 @@ body {
 .item {
     position: relative;
     margin: 0;
-    filter: brightness(40%);
+    filter: brightness(60%);
 }
 
 /* object-fit: cover makes the image fill its box without stretching. */
