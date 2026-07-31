@@ -1,0 +1,77 @@
+/* Base Page Reset & Centering */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6f8;
+}
+
+/* Circular Outer Face */
+.clock {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 4px solid #888888;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Base Hand Styles */
+.hand {
+  position: absolute;
+  top: 50%;          /* vertical center */
+  left: 50%;         /* horizontal center */
+  border-radius: 4px;
+  
+  /* Pivot Point: Rotates around the (clock center) */
+  transform-origin: bottom center;
+}
+
+/* Minute Hand */
+.minute-hand {
+  width: 5px;
+  height: 105px;
+  background-color: #2563eb; 
+  z-index: 2;
+  animation: rotate-hand 60s linear infinite;
+}
+
+/* Second Hand  */
+.second-hand {
+  width: 3px;
+  height: 140px;
+  background-color: #dc2626; 
+  z-index: 3;
+  animation: rotate-hand 10s linear infinite;
+}
+
+/* Center point */
+.center-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #dc2626;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* Rotation Animation */
+@keyframes rotate-hand {
+  from {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
