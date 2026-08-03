@@ -639,7 +639,7 @@ input[type="date"]:invalid::before {
     position: absolute;
     color: #e0dddd;
     left: 11rem;
-    top: 44%;
+    top: 54%;
     transform: translateY(-50%);
     pointer-events: none; /* Let clicks pass through to the calendar */
 }
